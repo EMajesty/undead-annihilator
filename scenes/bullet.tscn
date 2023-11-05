@@ -1,0 +1,26 @@
+[gd_scene load_steps=4 format=3 uid="uid://bysh0lb6gehv5"]
+
+[ext_resource type="Script" path="res://scripts/bullet.gd" id="1_04mdj"]
+[ext_resource type="Texture2D" uid="uid://bf2n3cxcn6kbp" path="res://art/sprites/bullet1.png" id="1_w7y38"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_hjfce"]
+radius = 2.0
+height = 6.0
+
+[node name="bullet" type="Area2D"]
+script = ExtResource("1_04mdj")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("1_w7y38")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+rotation = 1.5708
+shape = SubResource("CapsuleShape2D_hjfce")
+
+[node name="Timer" type="Timer" parent="."]
+wait_time = 2.0
+one_shot = true
+autostart = true
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]

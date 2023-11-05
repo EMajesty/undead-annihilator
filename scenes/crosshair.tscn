@@ -1,0 +1,8 @@
+[gd_scene load_steps=3 format=3 uid="uid://bejr6ss5iv4ob"]
+
+[ext_resource type="Texture2D" uid="uid://b6lxxebhv4586" path="res://art/sprites/crosshair1.png" id="1_ukgea"]
+[ext_resource type="Script" path="res://scripts/crosshair.gd" id="2_73mjr"]
+
+[node name="crosshair" type="Sprite2D"]
+texture = ExtResource("1_ukgea")
+script = ExtResource("2_73mjr")

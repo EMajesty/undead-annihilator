@@ -1,0 +1,26 @@
+[gd_scene load_steps=5 format=3 uid="uid://csrv6ecnrcbww"]
+
+[ext_resource type="Script" path="res://scripts/enemy.gd" id="1_nah53"]
+[ext_resource type="Texture2D" uid="uid://dfq56sts8heb7" path="res://art/sprites/ukko.png" id="2_b6adu"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_2olsl"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_6wbyh"]
+radius = 251.002
+
+[node name="enemy" type="CharacterBody2D" groups=["enemies"]]
+script = ExtResource("1_nah53")
+
+[node name="hitbox" type="CollisionShape2D" parent="."]
+shape = SubResource("CircleShape2D_2olsl")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("2_b6adu")
+
+[node name="Area2D" type="Area2D" parent="."]
+
+[node name="vision" type="CollisionShape2D" parent="Area2D"]
+shape = SubResource("CircleShape2D_6wbyh")
+
+[connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]
+[connection signal="body_exited" from="Area2D" to="." method="_on_area_2d_body_exited"]
