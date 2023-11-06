@@ -11,3 +11,7 @@ position = Vector2(16, -9)
 
 [node name="weapon" type="Sprite2D" parent="."]
 texture = ExtResource("1_5m7cd")
+
+[node name="firerate" type="Timer" parent="."]
+wait_time = 0.05
+one_shot = true

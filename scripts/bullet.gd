@@ -16,7 +16,7 @@ func _on_body_entered(body):
 	#	body.queue_free()
 	#	queue_free()
 	if body.has_method("get_hit"):
-		body.get_hit()
+		body.get_hit(20)
 
 func _on_timer_timeout():
 	queue_free()

@@ -1,10 +1,11 @@
-[gd_scene load_steps=6 format=3 uid="uid://yfk7nmu060le"]
+[gd_scene load_steps=7 format=3 uid="uid://yfk7nmu060le"]
 
 [ext_resource type="PackedScene" uid="uid://dxucgtbx7fxtm" path="res://scenes/player.tscn" id="2_0g8qk"]
 [ext_resource type="Texture2D" uid="uid://21tw1icy3jhi" path="res://art/check.png" id="2_aj5vv"]
 [ext_resource type="PackedScene" uid="uid://bejr6ss5iv4ob" path="res://scenes/crosshair.tscn" id="3_aimrc"]
 [ext_resource type="PackedScene" uid="uid://dmdehvhellgyr" path="res://scenes/ui.tscn" id="5_46krt"]
-[ext_resource type="PackedScene" uid="uid://csrv6ecnrcbww" path="res://scenes/enemy.tscn" id="5_ownmu"]
+[ext_resource type="PackedScene" uid="uid://c2854ydgprnxy" path="res://scenes/map.tscn" id="6_3r82o"]
+[ext_resource type="PackedScene" uid="uid://dtpkkqmjhqh5f" path="res://scenes/mobspawner.tscn" id="7_xn35n"]
 
 [node name="HELL" type="Node2D"]
 
@@ -17,62 +18,7 @@ texture = ExtResource("2_aj5vv")
 
 [node name="ui" parent="." instance=ExtResource("5_46krt")]
 
-[node name="enemy" parent="." instance=ExtResource("5_ownmu")]
-position = Vector2(-324, -294)
+[node name="map" parent="." instance=ExtResource("6_3r82o")]
 
-[node name="enemy2" parent="." instance=ExtResource("5_ownmu")]
-position = Vector2(-160, 329)
-
-[node name="enemy3" parent="." instance=ExtResource("5_ownmu")]
-position = Vector2(322, 233)
-
-[node name="enemy4" parent="." instance=ExtResource("5_ownmu")]
-position = Vector2(470, -150)
-
-[node name="enemy5" parent="." instance=ExtResource("5_ownmu")]
-position = Vector2(294, 6)
-
-[node name="enemy6" parent="." instance=ExtResource("5_ownmu")]
-position = Vector2(-431, -259)
-
-[node name="enemy7" parent="." instance=ExtResource("5_ownmu")]
-position = Vector2(-506, 15)
-
-[node name="enemy8" parent="." instance=ExtResource("5_ownmu")]
-position = Vector2(233, 315)
-
-[node name="enemy9" parent="." instance=ExtResource("5_ownmu")]
-position = Vector2(242, -222)
-
-[node name="enemy10" parent="." instance=ExtResource("5_ownmu")]
-position = Vector2(221, 169)
-
-[node name="enemy11" parent="." instance=ExtResource("5_ownmu")]
-position = Vector2(-321, 331)
-
-[node name="enemy12" parent="." instance=ExtResource("5_ownmu")]
-position = Vector2(47, 279)
-
-[node name="enemy13" parent="." instance=ExtResource("5_ownmu")]
-position = Vector2(582, 299)
-
-[node name="enemy14" parent="." instance=ExtResource("5_ownmu")]
-position = Vector2(-433, 161)
-
-[node name="enemy15" parent="." instance=ExtResource("5_ownmu")]
-position = Vector2(-481, -100)
-
-[node name="enemy16" parent="." instance=ExtResource("5_ownmu")]
-position = Vector2(-253, 178)
-
-[node name="enemy17" parent="." instance=ExtResource("5_ownmu")]
-position = Vector2(-323, 13)
-
-[node name="enemy18" parent="." instance=ExtResource("5_ownmu")]
-position = Vector2(110, -257)
-
-[node name="enemy19" parent="." instance=ExtResource("5_ownmu")]
-position = Vector2(-183, -191)
-
-[node name="enemy20" parent="." instance=ExtResource("5_ownmu")]
-position = Vector2(-148, -329)
+[node name="mobspawner" parent="." instance=ExtResource("7_xn35n")]
+position = Vector2(384, -141)

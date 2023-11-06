@@ -1,0 +1,9 @@
+[gd_scene load_steps=2 format=3 uid="uid://c2854ydgprnxy"]
+
+[ext_resource type="Texture2D" uid="uid://d0beag38mshr0" path="res://art/sprites/lamp.png" id="1_iyofm"]
+
+[node name="map" type="Node2D"]
+
+[node name="PointLight2D" type="PointLight2D" parent="."]
+position = Vector2(121, 81)
+texture = ExtResource("1_iyofm")
